@@ -18,4 +18,9 @@ public class UsuarioService {
         return usuarioRepositorio.findAll();
     }
 
-}
+    public void update(Usuario usuario) {
+        //Usuario usuario = usuarioRepositorio.findById(int idUsuario);
+
+
+        }
+    }

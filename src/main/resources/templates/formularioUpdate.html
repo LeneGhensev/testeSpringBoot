@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html xmlns:th="http://www.thymeleaf.org">
+
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário para atualizar dados</title>
+  </head>
+  <body>
+    <form action="#" th:action="@{/update}" th:object="${usuario}" method="post">
+
+      <label for="idUsuario">Id Usuário</label>
+      <input type="text" th:field="*{idUsuario}" id="idUsuario" placeholder="idUsuario">
+      <span th:if="${#fields.hasErrors('idUsuario')}" th:errors="*{id}"></span>
+
+      <label for="nome">Nome</label>
+      <input type="text" th:field="*{nome}" id="nome" placeholder="Nome">
+      <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+
+      <label for="senha">Senha</label>
+      <input type="text" th:field="*{senha}" id="senha" placeholder="Senha">
+      <span th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"></span>
+      <input type="submit" value="Update">
+    </form>
+  </body>
+</html>
