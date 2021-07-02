@@ -7,11 +7,19 @@
     <title>Consulta</title>
 </head>
 <body>
-    <tr th:each="usuario : ${usuarios}">
-        <td th:text="${usuario.idUsuario}">teste</td>
-        <td th:text="${usuario.nome}">teste</td>
-        <br>
-        <!--        <td><a href="#" th:text="${usuario.nome}">Title ...</a></td>-->
-    </tr>
+<tr th:each="usuario : ${usuarios}">
+    <td th:text="${usuario.idUsuario}">teste</td>
+    <td th:text="${usuario.nome}">teste</td>
+    <!--        <form>-->
+    <!--            <button type="modificaUsuario" formaction="/formularioUpdate/${usuario.idUsuario}">Modificar Usuário </button>-->
+    <!--        </form>-->
+
+    <form th:action="@{/formularioUpdate}">
+        <button type="submit" th:name="idUsuario" th:value="${usuario.idUsuario}">Modificar Usuário </button>
+    </form>
+
+    <br>
+    <!--        <td><a href="#" th:text="${usuario.nome}">Title ...</a></td>-->
+</tr>
 </body>
 </html>
