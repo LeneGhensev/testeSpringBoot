@@ -54,4 +54,9 @@ public class MeuController {
         usuarioService.save(usuario);
         return "salva";
     }
+
+    @RequestMapping("/login")
+    public String login(Usuario usuario, BindingResult result, Model model){
+    return "login";
+    }
 }
