@@ -59,4 +59,10 @@ public class MeuController {
     public String login(Usuario usuario, BindingResult result, Model model){
     return "login";
     }
+
+//    @RequestMapping("/acessoLogin")
+//    public String login(Usuario usuario, BindingResult result, Model model){
+//        return "login";
+//    }
+
 }
