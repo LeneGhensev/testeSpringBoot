@@ -12,6 +12,9 @@ public class Usuario {
     private String nome;
     @Column(name = "senha")
     private String senha;
+    @Transient
+    private boolean authenticated;
+
 /*  @Transient
     private String naoVaiPraTabela;*/
 
@@ -37,5 +40,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public boolean isAuthenticated() {
+        return authenticated;
+    }
+
+    public void setAuthenticated(boolean authenticated) {
+        this.authenticated = authenticated;
     }
 }

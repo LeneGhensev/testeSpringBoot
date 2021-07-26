@@ -22,6 +22,7 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
+
                         <h3 class="text-center text-info">Consultar usuários</h3>
 
                             <tr th:each="usuario : ${usuarios}">
@@ -45,6 +46,10 @@
 <!--                                <br>-->
                                 <!--        <td><a href="#" th:text="${usuario.nome}">Title ...</a></td>-->
                             </tr>
+
+                        <form th:action="@{logout}">
+                            <button input type="submit" value="sair" class="btn btn-primary">SAIR</button>
+                        </form>
 
                     </div>
                 </div>

@@ -21,6 +21,9 @@ public class UsuarioService {
     public void update(Usuario usuario) {
         //Usuario usuario = usuarioRepositorio.findById(int idUsuario);
 
-
         }
+    public Usuario findUserByNameAndPassword(String username, String password) {
+        return usuarioRepositorio.findUserByNameAndPassword(username, password).get(0);
     }
+
+}

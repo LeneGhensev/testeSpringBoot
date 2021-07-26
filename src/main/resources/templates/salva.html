@@ -21,11 +21,16 @@
         <div id="login-column" class="col-md-6">
           <div id="login-box" class="col-md-12">
             <h3 class="text-center text-info">Usuário Salvo com Sucesso!</h3>
-
+            <br /><br />
               <div class="d-grid gap-2 col-6 mx-auto">
                 <form th:action="@{/consulta}">
                   <button input type="submit" value="voltar" class="btn btn-primary">Voltar para Consulta</button>
                 </form>
+                <br /><br />
+                <form th:action="@{logout}">
+                  <button input type="submit" value="sair" class="btn btn-primary">SAIR</button>
+                </form>
+
               </div>
 
               </div>

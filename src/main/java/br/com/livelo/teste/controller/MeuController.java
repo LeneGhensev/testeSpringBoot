@@ -49,20 +49,10 @@ public class MeuController {
     }
 
     @RequestMapping("/update")
-    public String update(Usuario usuario, BindingResult result, Model model){
-       // construir um usuario (new) com o id, nome e senha que virão do formulário
+    public String update(Usuario usuario, BindingResult result, Model model) {
+        // construir um usuario (new) com o id, nome e senha que virão do formulário
         usuarioService.save(usuario);
         return "salva";
     }
-
-    @RequestMapping("/login")
-    public String login(Usuario usuario, BindingResult result, Model model){
-    return "login";
-    }
-
-//    @RequestMapping("/acessoLogin")
-//    public String login(Usuario usuario, BindingResult result, Model model){
-//        return "login";
-//    }
 
 }
